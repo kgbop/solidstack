@@ -30,9 +30,8 @@ const config: Config = {
           flex: "1 1 auto",
         },
         "._container": {
-          maxWidth: "1440px",
           margin: "0 auto",
-          padding: "0 20px",
+          padding: "0 2rem",
         },
       });
     }),

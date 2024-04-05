@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const plugin = require("tailwindcss/plugin");
 
 const config: Config = {
   content: [
@@ -7,14 +8,34 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
+    extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addBase }: { addBase: any }) => {
+      addBase({
+        "*, *:before, *:after": {
+          "-webkitTapHighlightColor": "transparent",
+        },
+        html: {
+          fontSize: "0.6944vw",
+        },
+        body: {
+          minWidth: "360px",
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+          fontFamily: '"Aeonik Pro", sans-serif',
+        },
+        main: {
+          flex: "1 1 auto",
+        },
+        "._container": {
+          maxWidth: "1440px",
+          margin: "0 auto",
+          padding: "0 20px",
+        },
+      });
+    }),
+  ],
 };
 export default config;

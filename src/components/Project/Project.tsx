@@ -5,7 +5,6 @@ import classNames from "classnames";
 
 export default function Project() {
   const [active, setActive] = useState(false);
-  const [spoiler, setSpoiler] = useState(false);
 
   const projectList = [
     {

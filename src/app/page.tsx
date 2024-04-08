@@ -1,9 +1,12 @@
-import { Project } from "@/components";
+import { Project, Intro } from "@/components";
 
 export default function Home() {
   return (
     <main className="">
-      <Project />
+      <Intro />
+      {new Array(4).fill("").map((item, index) => (
+        <Project />
+      ))}
     </main>
   );
 }

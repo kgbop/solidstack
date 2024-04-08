@@ -5,6 +5,7 @@ import classNames from "classnames";
 
 export default function Project() {
   const [active, setActive] = useState(false);
+  const [spoiler, setSpoiler] = useState(false);
 
   const projectList = [
     {
@@ -32,78 +33,111 @@ export default function Project() {
 
   return (
     <div
-      className="py-[2rem] border-[#f0f1f0] border-y-[1px] cursor-pointer duration-300 hover:bg-[#f6f6f6]"
-      onClick={() => setActive((prev) => !prev)}
+      className={classNames(
+        "py-[2rem] border-[#f0f1f0] border-y-[1px] cursor-pointer duration-700 hover:bg-[#f6f6f6] overflow-hidden ease-in-out",
+        active && "bg-[#f6f6f6]",
+        active ? "max-h-[1000px]" : "max-h-[336.69px]"
+      )}
+      onClick={() => {
+        setActive((prev) => !prev);
+      }}
     >
-      <div className="_container flex min-h-[24rem]">
-        <div className="flex items-start">
-          <div className="w-[26.7rem] mr-[5.3rem] h-[8.5rem]">
-            <img src="img/logo-1.svg" alt="" />
+      <div>
+        <div className="_container flex min-h-[24rem]">
+          <div className="flex items-start">
+            <div className="w-[26.7rem] mr-[5.3rem] h-[8.5rem]">
+              <img src="img/logo-1.svg" alt="" />
+            </div>
+            <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase w-[20rem]">
+              <span>Проект в работе</span>
+            </div>
+            <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase">
+              <span>Скоро</span>
+            </div>
           </div>
-          <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase w-[20rem]">
-            <span>Проект в работе</span>
-          </div>
-          <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase">
-            <span>Скоро</span>
-          </div>
-        </div>
-        <div className="ml-auto relative pr-10">
-          <div className="flex flex-col justify-between h-full w-[49rem]">
-            <div className="flex items-end">
-              <div
-                className={classNames(
-                  "text-[1.2rem] tracking-[-.012rem] uppercase font-medium text-[#1a1b1d] [&>ul>li>span]:h-[2.4rem] [&>ul>li>span]:px-[.8rem] [&>ul>li>span]:rounded-[100px] [&>ul>li>span]:border [&>ul>li>span]:w-max [&>ul>li>span]:border-[#e1e2e0] [&>ul>li>span]:flex [&>ul]:flex-wrap [&>ul>li>span]:items-center [&>ul]:flex [&>ul>li>p]:text-[#6d6d75] [&>ul>li>p]:text-[1.4rem] [&>ul>li>p]:lowercase [&>ul]:gap-y-[.4rem] [&>ul>li>p]:tracking-[-.014rem] [&>ul>li>p]:hidden",
-                  active &&
-                    "[&>ul]:flex-col [&>ul]:items-start [&>ul>li>p]:!block [&>ul>li>p]:mt-[.8rem] [&>ul]:gap-y-[4rem]"
-                )}
-              >
-                <ul>
-                  {projectList.map((item, index) => (
-                    <li key={index}>
-                      <span
-                        className={classNames(
-                          "duration-300",
-                          item.link && "hover:border-[#1a1b1d]"
-                        )}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          if (item.link) window.open("http://yoursite.com");
-                        }}
-                      >
-                        {item.title}
-                        {item.link && " →"}
-                      </span>
-                      <p>{item.text}</p>
-                    </li>
-                  ))}
-                </ul>
+          <div className="ml-auto relative pr-10">
+            <div className="flex flex-col justify-between h-full w-[49rem]">
+              <div className="flex items-end">
+                <div
+                  className={classNames(
+                    "text-[1.2rem] tracking-[-.012rem] uppercase font-medium text-[#1a1b1d]"
+                  )}
+                >
+                  <ul
+                    className={classNames(
+                      "flex-wrap flex gap-y-[.4rem]",
+                      active && "flex-col items-start gap-y-[4rem]"
+                    )}
+                  >
+                    {projectList.map((item, index) => (
+                      <li key={index}>
+                        <div
+                          className="flex group"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            if (item.link) window.open("http://yoursite.com");
+                          }}
+                        >
+                          <span
+                            className={classNames(
+                              "duration-300 h-[2.4rem] px-[.8rem] rounded-[100px] border w-max border-[#e1e2e0] flex items-center",
+                              item.link && "hover:border-[#1a1b1d]"
+                            )}
+                          >
+                            {item.title}
+                            {item.link && " →"}
+                          </span>
+                          {item.link && (
+                            <button
+                              className={classNames(
+                                "bg-[#d5ff0c] text-[1.2rem] h-[2.4rem] tracking-[-.012rem] px-[.8rem] uppercase font-medium text-[#1a1b1d] opacity-0 invisible duration-300 absolute",
+                                active &&
+                                  "group-hover:opacity-100 group-hover:visible !static"
+                              )}
+                            >
+                              перейти на сайт
+                            </button>
+                          )}
+                        </div>
+                        <p
+                          className={classNames(
+                            "tracking-[-.014rem] text-[#6d6d75] text-[1.4rem] lowercase hidden",
+                            active && "!block mt-[.8rem]"
+                          )}
+                        >
+                          {item.text}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <button
+                  className={classNames(
+                    "bg-[#d5ff0c] text-[#1a1b1d] text-[1.2rem] h-[2.4rem] tracking-[-.012rem] px-[.8rem] font-medium uppercase flex-none",
+                    active && "hidden"
+                  )}
+                >
+                  +[1]
+                </button>
               </div>
-              <button
+              <p
                 className={classNames(
-                  "bg-[#d5ff0c] text-[#1a1b1d] text-[1.2rem] h-[2.4rem] tracking-[-.012rem] px-[.8rem] font-medium uppercase flex-none",
+                  "text-[#6d6d75] text-[1.4rem] tracking-[-.014rem] leading-[130%] max-w-[37rem] lowercase",
                   active && "hidden"
                 )}
               >
-                +[1]
-              </button>
+                работаем со старейшим застройщиком красноярского края для
+                обновления облика сайта застройщика и цифровизации деятельности
+                компании
+              </p>
             </div>
-            <p
+            <div
               className={classNames(
-                "text-[#6d6d75] text-[1.4rem] tracking-[-.014rem] leading-[130%] max-w-[37rem] lowercase",
-                active && "hidden"
+                "border-solid border-t-[#929298] border-t-8 border-x-transparent border-x-8 border-b-0 absolute w-[10px] bottom-0 right-0 duration-300",
+                active && "rotate-180"
               )}
-            >
-              работаем со старейшим застройщиком красноярского края для
-              обновления облика сайта застройщика и цифровизации деятельности
-              компании
-            </p>
+            ></div>
           </div>
-          <div
-            className={classNames(
-              "border-solid border-t-[#929298] border-t-8 border-x-transparent border-x-8 border-b-0 absolute w-[10px] bottom-0 right-0 duration-300",
-              active && "rotate-180"
-            )}
-          ></div>
         </div>
       </div>
     </div>

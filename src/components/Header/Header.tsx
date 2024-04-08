@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="bg-white py-3">
+    <header className="bg-white py-3 fixed left-0 right-0 z-10">
       <div className="_container flex items-center justify-between">
         <button className="font-medium text-[1.6rem] leading-[16px] text-[#1A1B1D] tracking-[-.016rem]">
           кейсы

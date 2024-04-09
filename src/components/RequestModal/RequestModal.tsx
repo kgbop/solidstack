@@ -1,4 +1,4 @@
-import { LayoutModal } from "@/components";
+import { LayoutModal, Button } from "@/components";
 
 export default function RequestModal({
   activeModal,
@@ -14,7 +14,7 @@ export default function RequestModal({
           оставьте заявку <br />и с вами свяжется менеджер
         </h3>
         <form action="#" className="flex flex-col gap-[1.6rem] flex-auto">
-          <div>
+          <div className="flex flex-col gap-[1.6rem]">
             <label className="flex flex-col gap-[1.6rem] text-[#929298] text-[1.2rem] tracking-[-.012rem]">
               имя
               <input
@@ -56,13 +56,14 @@ export default function RequestModal({
               />
             </label>
           </div>
-          <div className="mt-auto">
+          <div className="mt-auto flex justify-between">
             <p className="text-[#929298] text-[1.2rem] tracking-[-.012rem]">
               Нажимая кнопку, вы подтверждаете свое согласие <br />
               <a href="#" className="text-[#1a1b1d]">
                 на обработку персональных данных
               </a>
             </p>
+            <Button text="отправить" />
           </div>
         </form>
       </div>

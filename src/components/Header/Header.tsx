@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { RequestModal } from "@/components";
+import { useEffect, useState } from "react";
+import { RequestModal, Button, ContactsModal } from "@/components";
 
 export default function Header() {
   const [value, setValue] = useState(100);
   const [activeModal, setActiveModal] = useState(false);
+  const [activeContactsModal, setActiveContactsModal] = useState(false);
 
   useEffect(() => {
     document.addEventListener("scroll", scrollHandler);
@@ -49,24 +50,36 @@ export default function Header() {
               8 495 646 09 06
             </a>
             <div className="flex text-[1.6rem] text-[#1A1B1D] leading-[18px] font-medium tracking-[-.016rem]">
-              <button className="py-[6px] px-[13px] border border-[#E1E2E0] rounded-[100px]">
-                контакты
-              </button>
               <button
-                className="py-[6px] px-[13px] bg-[#d5ff0c]"
+                className="py-[6px] px-[13px] border border-[#E1E2E0] rounded-[100px]"
                 onClick={() => {
-                  setActiveModal(true);
+                  setActiveContactsModal(true);
                   document.body.classList.add("lock");
                 }}
               >
-                сотрудничать
+                контакты
               </button>
+              <Button
+                clickHandler={() => {
+                  setActiveModal(true);
+                  document.body.classList.add("lock");
+                }}
+                text="сотрудничать"
+              />
             </div>
           </div>
         </div>
       </header>
 
-      <RequestModal activeModal={activeModal} closeModal={setActiveModal} />
+      {activeModal && (
+        <RequestModal activeModal={activeModal} closeModal={setActiveModal} />
+      )}
+      {activeContactsModal && (
+        <ContactsModal
+          activeModal={activeContactsModal}
+          closeModal={setActiveContactsModal}
+        />
+      )}
     </>
   );
 }

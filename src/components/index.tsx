@@ -6,6 +6,7 @@ import Clock from "@/components/Clock/Clock";
 import LayoutModal from "@/components/LayoutModal/LayoutModal";
 import RequestModal from "@/components/RequestModal/RequestModal";
 import Button from "@/components/Button/Button";
+import ContactsModal from "@/components/ContactsModal/ContactsModal";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   LayoutModal,
   RequestModal,
   Button,
+  ContactsModal,
 };

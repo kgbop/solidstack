@@ -33,7 +33,7 @@ export default function Project() {
   return (
     <div
       className={classNames(
-        "py-[2rem] border-[#f0f1f0] border-y-[1px] cursor-pointer duration-700 hover:bg-[#f6f6f6] overflow-hidden ease-in-out",
+        "py-[2rem] border-[#f0f1f0] border-y-[1px] cursor-pointer duration-1000 hover:bg-[#f6f6f6] overflow-hidden ease-in-out",
         active && "bg-[#f6f6f6]",
         active ? "max-h-[1000px]" : "max-h-[336.69px]"
       )}

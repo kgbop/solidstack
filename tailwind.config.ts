@@ -16,6 +16,9 @@ const config: Config = {
         "*, *:before, *:after": {
           "-webkitTapHighlightColor": "transparent",
         },
+        "*::selection": {
+          background: "#d5ff0c",
+        },
         html: {
           fontSize: "0.6944vw",
         },
@@ -32,6 +35,9 @@ const config: Config = {
         "._container": {
           margin: "0 auto",
           padding: "0 2rem",
+        },
+        "body.lock": {
+          overflow: "hidden",
         },
       });
     }),

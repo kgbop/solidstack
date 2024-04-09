@@ -8,6 +8,7 @@ import RequestModal from "@/components/RequestModal/RequestModal";
 import Button from "@/components/Button/Button";
 import ContactsModal from "@/components/ContactsModal/ContactsModal";
 import Input from "@/components/Input/Input";
+import Amount from "@/components/Amount/Amount";
 
 export {
   Header,
@@ -20,4 +21,5 @@ export {
   Button,
   ContactsModal,
   Input,
+  Amount,
 };

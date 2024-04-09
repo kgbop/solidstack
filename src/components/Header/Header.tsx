@@ -51,7 +51,7 @@ export default function Header() {
             </a>
             <div className="flex text-[1.6rem] text-[#1A1B1D] leading-[18px] font-medium tracking-[-.016rem]">
               <button
-                className="py-[6px] px-[13px] border border-[#E1E2E0] rounded-[100px]"
+                className="py-[6px] px-[13px] border border-[#E1E2E0] rounded-[100px] hover:border-[#1a1b1d] duration-300"
                 onClick={() => {
                   setActiveContactsModal(true);
                   document.body.classList.add("lock");

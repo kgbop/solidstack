@@ -7,6 +7,7 @@ import LayoutModal from "@/components/LayoutModal/LayoutModal";
 import RequestModal from "@/components/RequestModal/RequestModal";
 import Button from "@/components/Button/Button";
 import ContactsModal from "@/components/ContactsModal/ContactsModal";
+import Input from "@/components/Input/Input";
 
 export {
   Header,
@@ -18,4 +19,5 @@ export {
   RequestModal,
   Button,
   ContactsModal,
+  Input,
 };

@@ -1,4 +1,4 @@
-import { LayoutModal, Button } from "@/components";
+import { LayoutModal, Button, Input } from "@/components";
 
 export default function RequestModal({
   activeModal,
@@ -15,46 +15,19 @@ export default function RequestModal({
         </h3>
         <form action="#" className="flex flex-col gap-[1.6rem] flex-auto">
           <div className="flex flex-col gap-[1.6rem]">
-            <label className="flex flex-col gap-[1.6rem] text-[#929298] text-[1.2rem] tracking-[-.012rem]">
-              имя
-              <input
-                type="text"
-                placeholder="Сергей"
-                className="text-[2.7rem] tracking-[-.032rem] font-medium text-[#1a1b1d] leading-[1.15] border-b border-[#e1e2e0] focus:outline-none placeholder:text-[#e1e2e0]"
-              />
-            </label>
-            <label className="flex flex-col gap-[1.6rem] text-[#929298] text-[1.2rem] tracking-[-.012rem]">
-              номер телефона
-              <input
-                type="tel"
-                placeholder="+7 xxx xxx xx xx"
-                className="text-[2.7rem] tracking-[-.032rem] font-medium text-[#1a1b1d] leading-[1.15] border-b border-[#e1e2e0] focus:outline-none placeholder:text-[#e1e2e0]"
-              />
-            </label>
-            <label className="flex flex-col gap-[1.6rem] text-[#929298] text-[1.2rem] tracking-[-.012rem]">
-              e-mail
-              <input
-                type="email"
-                placeholder="s.gordeev@pik.ru"
-                className="text-[2.7rem] tracking-[-.032rem] font-medium text-[#1a1b1d] leading-[1.15] border-b border-[#e1e2e0] focus:outline-none placeholder:text-[#e1e2e0]"
-              />
-            </label>
-            <label className="flex flex-col gap-[1.6rem] text-[#929298] text-[1.2rem] tracking-[-.012rem]">
-              название компании
-              <input
-                type="text"
-                placeholder="пик"
-                className="text-[2.7rem] tracking-[-.032rem] font-medium text-[#1a1b1d] leading-[1.15] border-b border-[#e1e2e0] focus:outline-none placeholder:text-[#e1e2e0]"
-              />
-            </label>
-            <label className="flex flex-col gap-[1.6rem] text-[#929298] text-[1.2rem] tracking-[-.012rem]">
-              комментарий
-              <input
-                type="text"
-                placeholder="если есть, что добавить"
-                className="text-[2.7rem] tracking-[-.032rem] font-medium text-[#1a1b1d] leading-[1.15] border-b border-[#e1e2e0] focus:outline-none placeholder:text-[#e1e2e0]"
-              />
-            </label>
+            <Input text="имя" type="text" placeholder="Сергей" />
+            <Input
+              text="номер телефона"
+              type="tel"
+              placeholder="+7 xxx xxx xx xx"
+            />
+            <Input text="e-mail" type="email" placeholder="s.gordeev@pik.ru" />
+            <Input text="название компании" type="text" placeholder="пик" />
+            <Input
+              text="комментарий"
+              type="text"
+              placeholder="если есть, что добавить"
+            />
           </div>
           <div className="mt-auto flex justify-between">
             <p className="text-[#929298] text-[1.2rem] tracking-[-.012rem]">

@@ -1,4 +1,7 @@
-import { List } from "@/components";
+"use client";
+
+import { useRef } from "react";
+import { List, CoordinatesButton } from "@/components";
 
 export default function Answers() {
   const list = [
@@ -7,8 +10,10 @@ export default function Answers() {
     { text: "выгрузка аналитики", href: "" },
   ];
 
+  const myRef = useRef<HTMLDivElement>(null);
+
   return (
-    <div className="bg-gradient-2 py-[2rem] bg-cover relative">
+    <div ref={myRef} className="bg-gradient-2 py-[2rem] bg-cover relative">
       <div className="_container">
         <div className="h-[20.88px]"></div>
         <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center">
@@ -34,6 +39,7 @@ export default function Answers() {
           бот на ИИ
         </p>
       </div>
+      <CoordinatesButton myRef={myRef} href="#" />
     </div>
   );
 }

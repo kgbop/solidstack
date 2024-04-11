@@ -1,4 +1,7 @@
-import { List } from "@/components";
+"use client";
+
+import { useRef } from "react";
+import { List, CoordinatesButton } from "@/components";
 
 export default function ReadyMadeTool() {
   const list = [
@@ -10,8 +13,10 @@ export default function ReadyMadeTool() {
     { text: "Фиды", href: "" },
   ];
 
+  const myRef = useRef<HTMLDivElement>(null);
+
   return (
-    <div className="bg-gradient py-[2rem] bg-cover relative">
+    <div ref={myRef} className="bg-gradient py-[2rem] bg-cover relative">
       <div className="_container">
         <div className="h-[20.88px]"></div>
         <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center">
@@ -37,7 +42,7 @@ export default function ReadyMadeTool() {
           инструмента продаж
         </p>
       </div>
-      <a href="#" className="absolute left-0 right-0 top-0 bottom-0"></a>
+      <CoordinatesButton myRef={myRef} href="#" />
     </div>
   );
 }

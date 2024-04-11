@@ -1,11 +1,9 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useRef } from "react";
 import { CoordinatesButton, List } from "@/components";
 
 export default function ForFree() {
-  const [active, setActive] = useState(false);
-
   const list = [
     { text: "бесплатно", href: "#" },
     { text: "каждый месяц", href: "" },
@@ -13,15 +11,6 @@ export default function ForFree() {
   ];
 
   const myRef = useRef<HTMLDivElement>(null);
-
-  const func = (e: any) => {
-    console.log(1);
-  };
-
-  useEffect(() => {
-    myRef?.current?.addEventListener("mouseover", func);
-    myRef?.current?.addEventListener("mouseout", func);
-  }, [myRef]);
 
   return (
     <div
@@ -53,8 +42,7 @@ export default function ForFree() {
           консультантов
         </p>
       </div>
-      <a href="#" className="absolute left-0 right-0 top-0 bottom-0"></a>
-      {active && <CoordinatesButton myRef={myRef} />}
+      <CoordinatesButton myRef={myRef} href="#" />
     </div>
   );
 }

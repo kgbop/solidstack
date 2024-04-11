@@ -23,3 +23,21 @@
   font-weight: 300;
   font-style: normal;
 }
+.bg-gradient {
+  background: radial-gradient(
+      187.3% 199.13% at -12.08% -11.89%,
+      #367de3 20.18%,
+      #08101d 67.43%,
+      #000 100%
+    ),
+    #fff;
+}
+.bg-gradient-2 {
+  background: radial-gradient(
+      187.3% 199.13% at -12.08% -11.89%,
+      #3e4959 20.18%,
+      #08101d 67.43%,
+      #000 100%
+    ),
+    #fff;
+}

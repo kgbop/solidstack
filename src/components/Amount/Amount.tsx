@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Amount() {
   return (
     <div className="py-[10rem] border-[#f0f1f0] border-t-[1px]">

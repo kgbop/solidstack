@@ -9,6 +9,11 @@ import Button from "@/components/Button/Button";
 import ContactsModal from "@/components/ContactsModal/ContactsModal";
 import Input from "@/components/Input/Input";
 import Amount from "@/components/Amount/Amount";
+import ForFree from "@/components/ForFree/ForFree";
+import CoordinatesButton from "@/components/CoordinatesButton/CoordinatesButton";
+import ReadyMadeTool from "@/components/ReadyMadeTool/ReadyMadeTool";
+import List from "@/components/List/List";
+import Answers from "@/components/Answers/Answers";
 
 export {
   Header,
@@ -22,4 +27,9 @@ export {
   ContactsModal,
   Input,
   Amount,
+  ForFree,
+  CoordinatesButton,
+  ReadyMadeTool,
+  List,
+  Answers,
 };

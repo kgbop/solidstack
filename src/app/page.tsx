@@ -1,12 +1,28 @@
-import { Project, Intro, Amount } from "@/components";
+import {
+  Project,
+  Intro,
+  Amount,
+  ForFree,
+  ReadyMadeTool,
+  Answers,
+} from "@/components";
 
 export default function Home() {
   return (
     <main className="">
       <Intro />
       <Amount />
-      {new Array(4).fill("").map((item, index) => (
-        <Project />
+      <ReadyMadeTool />
+      {new Array(2).fill("").map((item, index) => (
+        <Project key={index} />
+      ))}
+      <Answers />
+      {new Array(2).fill("").map((item, index) => (
+        <Project key={index} />
+      ))}
+      <ForFree />
+      {new Array(2).fill("").map((item, index) => (
+        <Project key={index} />
       ))}
     </main>
   );

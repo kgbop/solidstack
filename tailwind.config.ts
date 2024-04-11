@@ -28,6 +28,7 @@ const config: Config = {
           flexDirection: "column",
           minHeight: "100vh",
           fontFamily: '"Aeonik Pro", sans-serif',
+          lineHeight: "1.2",
         },
         main: {
           flex: "1 1 auto",

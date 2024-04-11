@@ -1,4 +1,4 @@
-import { LayoutModal, Button } from "@/components";
+import { LayoutModal } from "@/components";
 
 export default function ContactsModal({
   activeModal,
@@ -9,8 +9,8 @@ export default function ContactsModal({
 }) {
   const list = [
     { text: "youtube →", href: "" },
-    { text: "telegram", href: "" },
-    { text: "vc.ru", href: "" },
+    { text: "telegram →", href: "" },
+    { text: "vc.ru →", href: "" },
   ];
 
   return (

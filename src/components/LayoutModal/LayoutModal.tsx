@@ -27,7 +27,7 @@ const LayoutModal = ({
         >
           {children}
           <button
-            className="absolute top-1 right-3"
+            className="absolute top-4 right-4"
             onClick={() => {
               closeModal && closeModal(false);
               document.body.classList.remove("lock");

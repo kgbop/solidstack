@@ -25,6 +25,7 @@ export default function Header() {
       <header className="bg-white py-3 fixed left-0 right-0 z-10">
         <div className="_container flex items-center justify-between">
           <div className="flex items-center">
+            <img src="img/logo-2.svg" alt="" className="h-20 mr-6" />
             <div className="h-[2.4rem] w-[2.4rem] fill-transparent stroke-[#1a1b1d]">
               <svg width="100%" height="100%" viewBox="0 0 48 48">
                 <circle

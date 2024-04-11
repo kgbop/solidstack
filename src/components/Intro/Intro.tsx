@@ -1,4 +1,6 @@
 export default function Intro() {
+  const list = ["ТОП-4 В HABR HR", "ТОП-100 HH.RU", "250+ ЭКСПЕРТОВ"];
+
   return (
     <div className="pt-[5.6rem] min-h-[100vh] relative pb-[11.8rem]">
       <div className="_container flex flex-col">
@@ -36,6 +38,11 @@ export default function Intro() {
             кратно увеличиваем <br /> продажи через создание <br /> цифровых
             продуктов
           </p>
+          <ul className="flex gap-[4rem] mt-[2.8rem] text-[#929298] text-[1.2rem] uppercase">
+            {list.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

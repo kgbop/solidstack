@@ -14,6 +14,7 @@ import CoordinatesButton from "@/components/CoordinatesButton/CoordinatesButton"
 import ReadyMadeTool from "@/components/ReadyMadeTool/ReadyMadeTool";
 import List from "@/components/List/List";
 import Answers from "@/components/Answers/Answers";
+import Splide from "@/components/Splide/Splide";
 
 export {
   Header,
@@ -32,4 +33,5 @@ export {
   ReadyMadeTool,
   List,
   Answers,
+  Splide,
 };

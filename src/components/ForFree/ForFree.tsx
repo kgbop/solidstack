@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import { CoordinatesButton, List } from "@/components";
-
 import { Parallax } from "react-parallax";
 
 export default function ForFree() {
@@ -15,8 +14,8 @@ export default function ForFree() {
   const myRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div ref={myRef}>
-      <Parallax bgImage="/img/bg-1.jpg" strength={200} className="relative">
+    <div ref={myRef} className="relative">
+      <Parallax bgImage="/img/bg-1.jpg" strength={200}>
         <div className="_container py-[2rem]">
           <div className="h-[20.88px]"></div>
           <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center">
@@ -42,8 +41,8 @@ export default function ForFree() {
             консультантов
           </p>
         </div>
-        <CoordinatesButton myRef={myRef} href="#" />
       </Parallax>
+      <CoordinatesButton myRef={myRef} href="#" />
     </div>
   );
 }

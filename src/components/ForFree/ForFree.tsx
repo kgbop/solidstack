@@ -16,7 +16,7 @@ export default function ForFree() {
 
   return (
     <Parallax bgImage="/img/bg-1.jpg" strength={200} className="relative">
-      <div className="_container">
+      <div className="_container py-[2rem]">
         <div className="h-[20.88px]"></div>
         <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center">
           <h2 className="flex gap-3 justify-center items-center">

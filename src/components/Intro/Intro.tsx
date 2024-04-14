@@ -2,7 +2,7 @@ export default function Intro() {
   const list = ["ТОП-4 В HABR HR", "ТОП-100 HH.RU", "250+ ЭКСПЕРТОВ"];
 
   return (
-    <div className="pt-[5.6rem] min-h-[100vh] relative pb-[11.8rem]">
+    <div className="pt-[5.6rem] min-h-[100vh] relative pb-[11.8rem] z-10">
       <div className="_container flex flex-col">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[4.4rem] font-medium uppercase leading-[100%] w-max">
           <div className="flex gap-3 justify-center">

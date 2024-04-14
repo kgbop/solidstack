@@ -1,6 +1,6 @@
 export default function Amount() {
   return (
-    <div className="py-[10rem] border-[#f0f1f0] border-t-[1px]">
+    <div className="py-[10rem] border-[#f0f1f0] border-t-[1px] bg-white z-10 relative">
       <div className="_container flex justify-between text-[4.4rem] font-medium uppercase leading-[1.2]">
         <div>
           <p>350+ продуктов</p>

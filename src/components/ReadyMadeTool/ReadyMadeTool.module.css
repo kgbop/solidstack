@@ -1,0 +1,49 @@
+.images {
+  display: flex;
+  flex-direction: column;
+  padding-left: 22.4rem;
+  padding-right: 4rem;
+  width: 100%;
+}
+
+.first {
+  height: 18.9rem;
+  margin-top: 0.5rem;
+  width: 40rem;
+}
+
+.two {
+  align-self: flex-end;
+  height: 21.7rem;
+  width: 40rem;
+}
+
+.image {
+  background-color: #08061d;
+  border-radius: 0.8rem;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.three {
+  height: 20rem;
+  width: 40rem;
+}
+
+.paralaxBlock {
+  translate: none;
+  rotate: none;
+  scale: none;
+  transform: translate(0%, -23.07%);
+  height: 100%;
+  width: 100%;
+  transition: 0.8s;
+}
+
+.imagesAll {
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 10rem;
+  width: 100%;
+}

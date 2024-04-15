@@ -79,7 +79,7 @@ export default function ReadyMadeTool() {
       </div>
       <div className="_container">
         <div className="h-[20.88px]"></div>
-        <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center">
+        <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center lg:text-[3.6rem]">
           <span className="opacity-50">готовый инструмент</span>
           <h2 className="flex gap-3 justify-center items-center">
             для запуска сайта
@@ -97,7 +97,7 @@ export default function ReadyMadeTool() {
           </h2>
         </div>
         <List list={list} />
-        <p className="mt-[3.7rem] text-[1.4rem] text-white tracking-[-.014rem]">
+        <p className="mt-[3.7rem] text-[1.4rem] text-white tracking-[-.014rem] lg:mt-[5.3rem]">
           быстрая реализация <br />
           инструмента продаж
         </p>

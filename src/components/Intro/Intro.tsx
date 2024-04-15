@@ -4,7 +4,7 @@ export default function Intro() {
   return (
     <div className="pt-[5.6rem] min-h-[100vh] relative pb-[11.8rem] z-10">
       <div className="_container flex flex-col">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[4.4rem] font-medium uppercase leading-[100%] w-max">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[4.4rem] font-medium uppercase leading-[100%] w-max lg:text-[3.6rem]">
           <div className="flex gap-3 justify-center">
             <span className="relative before:content-[''] before:block before:h-[3px] before:w-full before:bg-[#1a1b1d] before:absolute before:bottom-0">
               proptech

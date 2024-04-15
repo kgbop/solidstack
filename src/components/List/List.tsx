@@ -2,7 +2,7 @@ import React from "react";
 
 export default function List({ list }: { list: any }) {
   return (
-    <ul className="mt-[2rem] text-[1.2rem] tracking-[-.012rem] text-white flex uppercase justify-center">
+    <ul className="mt-[2rem] text-[1.2rem] tracking-[-.012rem] text-white flex uppercase justify-center lg:mt-[.8rem]">
       {list.map((item: any, index: number) => (
         <li
           key={index}

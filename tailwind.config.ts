@@ -8,6 +8,11 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      lg: { max: "1023px" },
+      md: { max: "767px" },
+      sm: { max: "479px" },
+    },
     extend: {},
   },
   plugins: [
@@ -39,6 +44,11 @@ const config: Config = {
         },
         "body.lock": {
           overflow: "hidden",
+        },
+        "@media (max-width: 1023px)": {
+          html: {
+            fontSize: "10px",
+          },
         },
       });
     }),

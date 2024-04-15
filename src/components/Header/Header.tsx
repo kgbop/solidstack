@@ -39,18 +39,18 @@ export default function Header() {
                 ></circle>
               </svg>
             </div>
-            <button className="font-medium text-[1.6rem] leading-[16px] text-[#1A1B1D] tracking-[-.016rem] ml-[4.8rem]">
+            <button className="font-medium text-[1.6rem] leading-[16px] text-[#1A1B1D] tracking-[-.016rem] ml-[4.8rem] lg:hidden">
               кейсы
             </button>
           </div>
-          <div className="flex gap-10 items-center">
+          <div className="flex gap-10 items-center lg:flex-auto">
             <a
-              className="text-[1.4rem] leading-[16px] text-[#1A1B1D] font-medium tracking-[-.014rem]"
+              className="text-[1.4rem] leading-[16px] text-[#1A1B1D] font-medium tracking-[-.014rem] lg:ml-[4.8rem]"
               href="tel:8(495)646-09-06"
             >
               8 495 646 09 06
             </a>
-            <div className="flex text-[1.6rem] text-[#1A1B1D] leading-[18px] font-medium tracking-[-.016rem]">
+            <div className="flex text-[1.6rem] text-[#1A1B1D] leading-[18px] font-medium tracking-[-.016rem] lg:ml-auto">
               <button
                 className="py-[6px] px-[13px] border border-[#E1E2E0] rounded-[100px] hover:border-[#1a1b1d] duration-300"
                 onClick={() => {

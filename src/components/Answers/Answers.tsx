@@ -55,7 +55,7 @@ export default function Answers() {
     <div ref={myRef} className="bg-gradient-2 py-[2rem] bg-cover relative">
       <div className="_container relative z-10">
         <div className="h-[20.88px]"></div>
-        <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center">
+        <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center lg:text-[3.6rem]">
           <span className="opacity-50">ответы по щелчку пальцев</span>
           <h2 className="flex gap-3 justify-center items-center">
             без задержек
@@ -73,7 +73,7 @@ export default function Answers() {
           </h2>
         </div>
         <List list={list} />
-        <p className="mt-[3.7rem] text-[1.4rem] text-white tracking-[-.014rem]">
+        <p className="mt-[3.7rem] text-[1.4rem] text-white tracking-[-.014rem] lg:mt-[5.3rem]">
           первый полноценый <br />
           бот на ИИ
         </p>

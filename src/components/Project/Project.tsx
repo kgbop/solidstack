@@ -42,20 +42,20 @@ export default function Project() {
       }}
     >
       <div>
-        <div className="_container flex min-h-[24rem]">
-          <div className="flex items-start">
-            <div className="w-[26.7rem] mr-[5.3rem] h-[8.5rem]">
+        <div className="_container flex min-h-[24rem] lg:min-h-[auto]">
+          <div className="flex items-start lg:flex-col">
+            <div className="w-[26.7rem] mr-[5.3rem] h-[8.5rem] lg:flex-auto lg:h-[16rem] lg:pb-[4rem] lg:w-[23.8rem]">
               <img src="img/logo-1.svg" alt="" />
             </div>
-            <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase w-[20rem]">
+            <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase w-[20rem] lg:h-auto">
               <span>Проект в работе</span>
             </div>
-            <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase">
+            <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase lg:h-auto">
               <span>Скоро</span>
             </div>
           </div>
           <div className="ml-auto relative pr-10">
-            <div className="flex flex-col justify-between h-full w-[49rem]">
+            <div className="flex flex-col justify-between h-full w-[49rem] lg:flex-col-reverse lg:w-[36.8rem]">
               <div className="flex items-end">
                 <div
                   className={classNames(
@@ -132,7 +132,7 @@ export default function Project() {
             </div>
             <div
               className={classNames(
-                "border-solid border-t-[#929298] border-t-8 border-x-transparent border-x-8 border-b-0 absolute w-[10px] bottom-0 right-0 duration-300",
+                "border-solid border-t-[#929298] border-t-8 border-x-transparent border-x-8 border-b-0 absolute bottom-0 right-0 duration-300 lg:border-t-4 lg:border-x-4",
                 active && "rotate-180"
               )}
             ></div>

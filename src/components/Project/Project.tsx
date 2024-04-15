@@ -33,29 +33,31 @@ export default function Project() {
   return (
     <div
       className={classNames(
-        "py-[2rem] border-[#f0f1f0] border-y-[1px] cursor-pointer duration-1000 hover:bg-[#f6f6f6] overflow-hidden ease-in-out bg-white z-10 relative",
+        "py-[2rem] border-[#f0f1f0] border-y-[1px] cursor-pointer duration-1000 hover:bg-[#f6f6f6] overflow-hidden bg-white z-10 relative",
         active && "bg-[#f6f6f6]",
-        active ? "max-h-[1000px]" : "max-h-[336.69px]"
+        active ? "max-h-[1000px]" : "max-h-[336.69px] md:max-h-[initial]"
       )}
       onClick={() => {
         setActive((prev) => !prev);
       }}
     >
       <div>
-        <div className="_container flex min-h-[24rem] lg:min-h-[auto]">
-          <div className="flex items-start lg:flex-col">
-            <div className="w-[26.7rem] mr-[5.3rem] h-[8.5rem] lg:flex-auto lg:h-[16rem] lg:pb-[4rem] lg:w-[23.8rem]">
+        <div className="_container flex min-h-[24rem] lg:min-h-[auto] md:flex-col">
+          <div className="flex items-start lg:flex-col md:flex-col-reverse">
+            <div className="w-[26.7rem] mr-[5.3rem] h-[8.5rem] lg:flex-auto lg:h-[16rem] lg:pb-[4rem] lg:w-[23.8rem] md:h-[21.4rem] md:pb-0 md:w-full md:flex md:justify-center">
               <img src="img/logo-1.svg" alt="" />
             </div>
-            <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase w-[20rem] lg:h-auto">
-              <span>Проект в работе</span>
-            </div>
-            <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase lg:h-auto">
-              <span>Скоро</span>
+            <div className="flex items-start lg:flex-col md:flex-row md:w-full md:justify-between">
+              <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase w-[20rem] lg:h-auto">
+                <span>Проект в работе</span>
+              </div>
+              <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase lg:h-auto">
+                <span>Скоро</span>
+              </div>
             </div>
           </div>
-          <div className="ml-auto relative pr-10">
-            <div className="flex flex-col justify-between h-full w-[49rem] lg:flex-col-reverse lg:w-[36.8rem]">
+          <div className="ml-auto relative pr-10 md:ml-0">
+            <div className="flex flex-col justify-between h-full w-[49rem] lg:flex-col-reverse lg:w-[36.8rem] md:w-full">
               <div className="flex items-end">
                 <div
                   className={classNames(
@@ -121,8 +123,8 @@ export default function Project() {
               </div>
               <p
                 className={classNames(
-                  "text-[#6d6d75] text-[1.4rem] tracking-[-.014rem] leading-[130%] max-w-[37rem] lowercase",
-                  active && "hidden"
+                  "text-[#6d6d75] text-[1.4rem] tracking-[-.014rem] leading-[130%] max-w-[37rem] lowercase md:hidden md:pb-[2rem]",
+                  active && "hidden md:!block"
                 )}
               >
                 работаем со старейшим застройщиком красноярского края для

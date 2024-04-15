@@ -12,7 +12,7 @@ const LayoutModal = ({
   return (
     <div
       className={classNames(
-        "fixed top-0 w-full h-full bg-[rgba(0,0,0,0.40)] overflow-auto duration-200 min-w-[375px] z-20",
+        "fixed top-0 w-full h-full bg-[rgba(0,0,0,0.40)] overflow-auto duration-200 min-w-[375px] z-30",
         active ? "visible opacity-100" : "invisible opacity-0"
       )}
       onClick={() => {

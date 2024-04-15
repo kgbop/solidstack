@@ -45,12 +45,12 @@ export default function Header() {
           </div>
           <div className="flex gap-10 items-center lg:flex-auto">
             <a
-              className="text-[1.4rem] leading-[16px] text-[#1A1B1D] font-medium tracking-[-.014rem] lg:ml-[4.8rem]"
+              className="text-[1.4rem] leading-[16px] text-[#1A1B1D] font-medium tracking-[-.014rem] lg:ml-[4.8rem] md:ml-auto"
               href="tel:8(495)646-09-06"
             >
               8 495 646 09 06
             </a>
-            <div className="flex text-[1.6rem] text-[#1A1B1D] leading-[18px] font-medium tracking-[-.016rem] lg:ml-auto">
+            <div className="flex text-[1.6rem] text-[#1A1B1D] leading-[18px] font-medium tracking-[-.016rem] lg:ml-auto md:fixed md:bottom-0 md:left-0 md:right-0 md:px-[2rem] md:pb-[2rem] md:pt-[1.2rem] md:bg-white">
               <button
                 className="py-[6px] px-[13px] border border-[#E1E2E0] rounded-[100px] hover:border-[#1a1b1d] duration-300"
                 onClick={() => {
@@ -66,6 +66,7 @@ export default function Header() {
                   document.body.classList.add("lock");
                 }}
                 text="сотрудничать"
+                className="md:flex-auto"
               />
             </div>
           </div>

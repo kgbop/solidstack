@@ -41,7 +41,7 @@ export default function ReadyMadeTool() {
 
   return (
     <div ref={myRef} className="bg-gradient py-[2rem] bg-cover relative">
-      <div className={styles.imagesAll}>
+      <div className={classNames(styles.imagesAll, "md:hidden")}>
         <div
           style={{ transform: `translate(0%, ${translateValue}%)` }}
           className={styles.paralaxBlock}
@@ -79,11 +79,12 @@ export default function ReadyMadeTool() {
       </div>
       <div className="_container">
         <div className="h-[20.88px]"></div>
-        <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center lg:text-[3.6rem]">
+        <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center lg:text-[3.6rem] md:mt-[8.4rem] md:text-[3.2rem] md:text-left">
           <span className="opacity-50">готовый инструмент</span>
-          <h2 className="flex gap-3 justify-center items-center">
-            для запуска сайта
-            <span>
+          <h2 className="flex gap-3 justify-center items-center md:justify-start md:flex-col md:items-start">
+            для запуска
+            <span className="flex gap-3">
+              сайта
               <video
                 muted
                 loop
@@ -92,12 +93,12 @@ export default function ReadyMadeTool() {
                 src="https://idaproject.com/video/lite.mp4"
                 className="w-[72px]"
               ></video>
+              за 1 день
             </span>
-            за 1 день
           </h2>
         </div>
-        <List list={list} />
-        <p className="mt-[3.7rem] text-[1.4rem] text-white tracking-[-.014rem] lg:mt-[5.3rem]">
+        <List list={list} className="md:hidden" />
+        <p className="mt-[3.7rem] text-[1.4rem] text-white tracking-[-.014rem] lg:mt-[5.3rem] md:mt-[7rem]">
           быстрая реализация <br />
           инструмента продаж
         </p>

@@ -1,8 +1,20 @@
+import classNames from "classnames";
 import React from "react";
 
-export default function List({ list }: { list: any }) {
+export default function List({
+  list,
+  className,
+}: {
+  list: any;
+  className?: string;
+}) {
   return (
-    <ul className="mt-[2rem] text-[1.2rem] tracking-[-.012rem] text-white flex uppercase justify-center lg:mt-[.8rem]">
+    <ul
+      className={classNames(
+        "mt-[2rem] text-[1.2rem] tracking-[-.012rem] text-white flex uppercase justify-center lg:mt-[.8rem]",
+        className
+      )}
+    >
       {list.map((item: any, index: number) => (
         <li
           key={index}

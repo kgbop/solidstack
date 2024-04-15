@@ -2,14 +2,23 @@
 
 import { useEffect, useRef, useState } from "react";
 import { List, CoordinatesButton } from "@/components";
-import styles from "./Answers.module.css";
 import { useWindowSize } from "@/hooks/windowSize";
+import styles from "./Answers.module.css";
 
 export default function Answers() {
   const [translateValue, setTranslateValue] = useState(-23.07);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
   const size = useWindowSize();
 
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const myRef = useRef<HTMLDivElement>(null);
+
+  const list = [
+    { text: "ai gpt", href: "#" },
+    { text: "вопросы любой сложности", href: "" },
+    { text: "выгрузка аналитики", href: "" },
+  ];
+
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
@@ -17,7 +26,6 @@ export default function Answers() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -30,26 +38,11 @@ export default function Answers() {
     if (size.width && size.width < 1600) {
       index = 8;
       del = 70;
-    }
-
-    if (size.width && size.width < 1400) {
-      index = 6;
-    }
-
-    if (size.width && size.width < 1100) {
-      index = 4;
-    }
+    } else if (size.width && size.width < 1400) index = 6;
+    else if (size.width && size.width < 1100) index = 4;
 
     setTranslateValue(-(scrollPosition / del) + index);
   }, [scrollPosition]);
-
-  const list = [
-    { text: "ai gpt", href: "#" },
-    { text: "вопросы любой сложности", href: "" },
-    { text: "выгрузка аналитики", href: "" },
-  ];
-
-  const myRef = useRef<HTMLDivElement>(null);
 
   return (
     <div ref={myRef} className="bg-gradient-2 py-[2rem] bg-cover relative">
@@ -64,7 +57,14 @@ export default function Answers() {
           <h2 className="flex gap-3 justify-center items-center md:flex-col md:gap-0 md:items-start">
             <span className="flex gap-3">
               без задержек
-              <video muted loop autoPlay playsInline src="https://idaproject.com/video/idachat.mp4" className="w-[72px]"></video>
+              <video
+                muted
+                loop
+                autoPlay
+                playsInline
+                src="https://idaproject.com/video/idachat.mp4"
+                className="w-[72px]"
+              ></video>
             </span>
             <span>круглосуточно</span>
           </h2>
@@ -75,15 +75,21 @@ export default function Answers() {
           бот на ИИ
         </p>
       </div>
-
-      <div>
-        <div style={{ transform: `translate(0%, ${translateValue}%)` }} className={styles.wrapperVideoAbsolute}>
-          <div className={styles.videoWrap}>
-            <video src="img/paralax2/ball.mp4" className={styles.video} muted={true} loop={true} autoPlay={true} playsInline={true}></video>
-          </div>
+      <div
+        style={{ transform: `translate(0%, ${translateValue}%)` }}
+        className={styles.wrapperVideoAbsolute}
+      >
+        <div className={styles.videoWrap}>
+          <video
+            src="img/paralax2/ball.mp4"
+            className={styles.video}
+            muted={true}
+            loop={true}
+            autoPlay={true}
+            playsInline={true}
+          ></video>
         </div>
       </div>
-
       <CoordinatesButton myRef={myRef} href="#" />
     </div>
   );

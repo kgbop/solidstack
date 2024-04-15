@@ -64,14 +64,7 @@ export default function Answers() {
           <h2 className="flex gap-3 justify-center items-center md:flex-col md:gap-0 md:items-start">
             <span className="flex gap-3">
               без задержек
-              <video
-                muted
-                loop
-                autoPlay
-                playsInline
-                src="https://idaproject.com/video/idachat.mp4"
-                className="w-[72px]"
-              ></video>
+              <video muted loop autoPlay playsInline src="https://idaproject.com/video/idachat.mp4" className="w-[72px]"></video>
             </span>
             <span>круглосуточно</span>
           </h2>
@@ -83,19 +76,11 @@ export default function Answers() {
         </p>
       </div>
 
-      <div
-        style={{ transform: `translate(0%, ${translateValue}%)` }}
-        className={styles.wrapperVideoAbsolute}
-      >
-        <div className={styles.videoWrap}>
-          <video
-            src="img/paralax2/ball.mp4"
-            className={styles.video}
-            muted={true}
-            loop={true}
-            autoPlay={true}
-            playsInline={true}
-          ></video>
+      <div>
+        <div style={{ transform: `translate(0%, ${translateValue}%)` }} className={styles.wrapperVideoAbsolute}>
+          <div className={styles.videoWrap}>
+            <video src="img/paralax2/ball.mp4" className={styles.video} muted={true} loop={true} autoPlay={true} playsInline={true}></video>
+          </div>
         </div>
       </div>
 

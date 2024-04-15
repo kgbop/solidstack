@@ -5,31 +5,26 @@
   padding-right: 4rem;
   width: 100%;
 }
-
 .first {
   height: 18.9rem;
   margin-top: 0.5rem;
   width: 40rem;
 }
-
 .two {
   align-self: flex-end;
   height: 21.7rem;
   width: 40rem;
 }
-
 .image {
   background-color: #08061d;
   border-radius: 0.8rem;
   isolation: isolate;
   overflow: hidden;
 }
-
 .three {
   height: 20rem;
   width: 40rem;
 }
-
 .paralaxBlock {
   translate: none;
   rotate: none;
@@ -39,11 +34,42 @@
   width: 100%;
   transition: 0.8s;
 }
-
 .imagesAll {
   opacity: 0.5;
   position: absolute;
   right: 0;
   top: 10rem;
   width: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  .first {
+    height: auto;
+    margin-top: 0.5rem;
+    width: 30rem;
+  }
+  .two {
+    align-self: flex-end;
+    height: auto;
+    width: 30rem;
+  }
+  .three {
+    height: auto;
+    width: 30rem;
+  }
+}
+@media only screen and (max-width: 926px) {
+  .first {
+    height: auto;
+    margin-top: 0.5rem;
+    width: 20rem;
+  }
+  .two {
+    align-self: flex-end;
+    height: auto;
+    width: 20rem;
+  }
+  .three {
+    height: auto;
+    width: 20rem;
+  }
 }

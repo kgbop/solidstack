@@ -8,15 +8,25 @@
   display: flex;
   justify-content: center;
 }
-
 .wrapperVideoAbsolute {
   position: absolute;
   width: 100%;
   transform: translate(0%, -11.41%);
   transition: 0.8s;
 }
-
 .video {
   border-radius: 50%;
   width: 47%;
+}
+@media only screen and (max-width: 768px) {
+  .wrapperVideoAbsolute {
+    top: -100px;
+  }
+  .videoWrap {
+    justify-content: right;
+  }
+  .video {
+    width: 250px;
+    transform: translate(70px, 0px);
+  }
 }

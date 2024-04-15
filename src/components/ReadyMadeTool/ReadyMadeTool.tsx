@@ -6,10 +6,11 @@ import { List, CoordinatesButton } from "@/components";
 
 import styles from "./ReadyMadeTool.module.css";
 import classNames from "classnames";
+import { useWindowSize } from "@/hooks/windowSize";
 
 export default function ReadyMadeTool() {
   const [translateValue, setTranslateValue] = useState(-23.07);
-
+  const size = useWindowSize();
   const list = [
     { text: "конструктор", href: "#" },
     { text: "30 дней бесплатно", href: "" },
@@ -34,7 +35,10 @@ export default function ReadyMadeTool() {
   }, []);
 
   useEffect(() => {
-    setTranslateValue(-(scrollPosition / 45));
+    let result = -(scrollPosition / 45);
+
+    result = -(scrollPosition / 4);
+    setTranslateValue(result);
   }, [scrollPosition]);
 
   const myRef = useRef<HTMLDivElement>(null);
@@ -43,7 +47,7 @@ export default function ReadyMadeTool() {
     <div ref={myRef} className="bg-gradient py-[2rem] bg-cover relative">
       <div className={classNames(styles.imagesAll, "md:hidden")}>
         <div
-          style={{ transform: `translate(0%, ${translateValue}%)` }}
+          style={{ transform: `translate(0%, ${translateValue}px)` }}
           className={styles.paralaxBlock}
         >
           <div className={styles.images}>

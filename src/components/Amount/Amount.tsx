@@ -10,7 +10,7 @@ export default function Amount() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && myRef.current) {
-          myRef.current.classList.add("translate-y-[0]");
+          myRef.current.classList.add("!translate-y-[0]");
           return;
         }
       });

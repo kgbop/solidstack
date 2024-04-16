@@ -44,7 +44,10 @@ export default function Splide({ className }: { className?: string }) {
       )}
     >
       {new Array(2).fill("").map((item, index) => (
-        <div className="keen-slider__slide flex [&>img]:h-[7.2rem] md:[&>img]:h-[6.4rem]">
+        <div
+          key={index}
+          className="animation-3 keen-slider__slide flex [&>img]:h-[7.2rem] md:[&>img]:h-[6.4rem]"
+        >
           {logo.map((item, index) => (
             <img key={index} className="" src={item} alt="" />
           ))}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { RequestModal, Button, ContactsModal } from "@/components";
+import { RequestModal, Button, ContactsModal, Transition } from "@/components";
 
 export default function Header() {
   const [value, setValue] = useState(100);
@@ -73,15 +73,13 @@ export default function Header() {
         </div>
       </header>
 
-      {activeModal && (
-        <RequestModal activeModal={activeModal} closeModal={setActiveModal} />
-      )}
-      {activeContactsModal && (
-        <ContactsModal
-          activeModal={activeContactsModal}
-          closeModal={setActiveContactsModal}
-        />
-      )}
+      <Transition active={activeModal}>
+        <RequestModal closeModal={setActiveModal} />
+      </Transition>
+
+      <Transition active={activeContactsModal}>
+        <ContactsModal closeModal={setActiveContactsModal} />
+      </Transition>
     </>
   );
 }

@@ -69,3 +69,21 @@
     transform-origin: left;
   }
 }
+.animation-modal-enter {
+  opacity: 0;
+  visibility: hidden;
+}
+.animation-modal-enter-active {
+  opacity: 1;
+  visibility: visible;
+  transition: 300ms;
+}
+.animation-modal-exit {
+  opacity: 1;
+  visibility: visible;
+}
+.animation-modal-exit-active {
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms;
+}

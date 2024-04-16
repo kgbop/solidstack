@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Clock, RequestModal } from "@/components";
+import { Clock, RequestModal, Transition } from "@/components";
 
 export default function Footer() {
   const [activeModal, setActiveModal] = useState(false);
@@ -26,9 +26,9 @@ export default function Footer() {
         </div>
       </footer>
 
-      {activeModal && (
-        <RequestModal activeModal={activeModal} closeModal={setActiveModal} />
-      )}
+      <Transition active={activeModal}>
+        <RequestModal closeModal={setActiveModal} />
+      </Transition>
     </>
   );
 }

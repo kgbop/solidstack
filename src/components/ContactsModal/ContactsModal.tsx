@@ -1,10 +1,8 @@
 import { LayoutModal } from "@/components";
 
 export default function ContactsModal({
-  activeModal,
   closeModal,
 }: {
-  activeModal: boolean;
   closeModal: (arg: boolean) => void;
 }) {
   const list = [
@@ -14,7 +12,7 @@ export default function ContactsModal({
   ];
 
   return (
-    <LayoutModal active={activeModal} closeModal={closeModal}>
+    <LayoutModal closeModal={closeModal}>
       <div className="flex flex-col h-full relative">
         <p className="text-[1.6rem] text-[#1a1b1d] font-medium tracking-[-.016rem] leading-[1.2]">
           москва <br />

@@ -1,15 +1,9 @@
-import {
-  Project,
-  Intro,
-  Amount,
-  ForFree,
-  ReadyMadeTool,
-  Answers,
-} from "@/components";
+import { Project, Intro, Amount, ForFree, ReadyMadeTool, Answers, Loader } from "@/components";
 
 export default function Home() {
   return (
     <main className="">
+      <Loader />
       <Intro />
       <Amount />
       <ReadyMadeTool />

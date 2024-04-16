@@ -1,0 +1,74 @@
+.shade {
+  background-color: #1a1b1d;
+  height: 100%;
+  transform: scaleX(1.1);
+  transform-origin: right;
+  transition: all 0.2s ease;
+  width: 6.6666666667%;
+}
+
+.shades {
+  display: flex;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.loader {
+  height: 100%;
+  left: 0;
+  pointer-events: all;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.logoFrame {
+  height: 2.4rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  width: 6rem;
+}
+
+.top {
+  animation: showing 2.3s ease-in-out;
+  width: 50%;
+  background-color: #fff;
+  height: 50%;
+  opacity: 0;
+  transform-origin: left;
+  transition: 0.4s ease-in-out;
+}
+
+.bottom {
+  animation: showing 2.3s ease-in-out;
+  width: 100%;
+  background-color: #fff;
+  height: 50%;
+  opacity: 0;
+  transform-origin: left;
+  transition: 0.4s ease-in-out;
+}
+
+@keyframes showing {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}

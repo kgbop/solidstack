@@ -47,7 +47,7 @@ export default function Answers() {
   return (
     <div ref={myRef} className="bg-gradient-2 py-[2rem] bg-cover relative">
       <div className="_container relative z-10">
-        <div className="h-[20.88px]"></div>
+        <img src="img/logo-13.svg" className="h-[20.88px]"></img>
         <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center lg:text-[3.6rem] lg:mt-[6.5rem] md:text-[3.2rem]">
           <div className="opacity-50 flex gap-3 justify-center md:flex-col md:items-start md:gap-0">
             <span>ответы</span>

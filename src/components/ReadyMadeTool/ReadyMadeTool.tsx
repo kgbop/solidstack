@@ -82,7 +82,7 @@ export default function ReadyMadeTool() {
         </div>
       </div>
       <div className="_container">
-        <div className="h-[20.88px]"></div>
+        <img src="img/logo-13.svg" className="h-[20.88px]"></img>
         <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center lg:text-[3.6rem] md:mt-[8.4rem] md:text-[3.2rem] md:text-left">
           <span className="opacity-50">готовый инструмент</span>
           <h2 className="flex gap-3 justify-center items-center md:justify-start md:flex-col md:items-start">

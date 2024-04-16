@@ -1,8 +1,10 @@
+import { Splide } from "@/components";
+
 export default function Intro() {
   const list = ["ТОП-4 В HABR HR", "ТОП-100 HH.RU", "250+ ЭКСПЕРТОВ"];
 
   return (
-    <div className="pt-[5.6rem] min-h-[100vh] relative pb-[11.8rem] z-10 md:min-h-[auto] md:pb-[2rem]">
+    <div className="pt-[5.6rem] min-h-[100vh] relative pb-[11.8rem] z-10 md:min-h-[auto] md:pb-0">
       <div className="_container flex flex-col">
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[4.4rem] font-medium uppercase leading-[100%] w-max lg:text-[3.6rem]
@@ -50,20 +52,23 @@ export default function Intro() {
             <span className="animation-1">из топ-100 ЕРЗ</span>
           </div>
         </div>
-        <div className="absolute bottom-[2rem] md:static md:mt-[1.2rem]">
-          <div className="overflow-hidden">
-            <p className="animation-1 text-[1.6rem] text-[#1a1b1d] leading-[1.2] font-medium">
-              кратно увеличиваем <br /> продажи через создание <br /> цифровых
-              продуктов
-            </p>
+        <div className="absolute bottom-0 left-0 right-0 md:static md:mt-[1.2rem] md:mx-[-2rem]">
+          <div className="px-[2rem]">
+            <div className="overflow-hidden">
+              <p className="animation-1 text-[1.6rem] text-[#1a1b1d] leading-[1.2] font-medium">
+                кратно увеличиваем <br /> продажи через создание <br /> цифровых
+                продуктов
+              </p>
+            </div>
+            <ul className="overflow-hidden flex gap-[4rem] mt-[2.8rem] mb-[2rem] text-[#929298] text-[1.2rem] uppercase md:mt-[7.2rem] md:justify-between">
+              {list.map((item, index) => (
+                <li className="animation-1" key={index}>
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="overflow-hidden flex gap-[4rem] mt-[2.8rem] text-[#929298] text-[1.2rem] uppercase md:mt-[7.2rem] md:justify-between">
-            {list.map((item, index) => (
-              <li className="animation-1" key={index}>
-                {item}
-              </li>
-            ))}
-          </ul>
+          <Splide className="animation-1" />
         </div>
       </div>
     </div>

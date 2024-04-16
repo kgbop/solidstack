@@ -16,6 +16,7 @@ import List from "@/components/List/List";
 import Answers from "@/components/Answers/Answers";
 import Splide from "@/components/Splide/Splide";
 import Transition from "@/components/Transition/Transition";
+import Loader from "@/components/Loader/Loader";
 
 export {
   Header,
@@ -36,4 +37,5 @@ export {
   Answers,
   Splide,
   Transition,
+  Loader,
 };

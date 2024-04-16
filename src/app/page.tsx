@@ -23,7 +23,7 @@ export default function Home() {
           {new Array(2).fill("").map((item, index) => (
             <Project key={index} />
           ))}
-          <Fopoter />
+          <Footer />
         </>
       ) : (
         <Loader onChangeVisible={(v) => setIsVisibleContent(v)} />

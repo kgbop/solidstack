@@ -41,3 +41,31 @@
     ),
     #fff;
 }
+@keyframes enter {
+  0% {
+    transform: translateY(120%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes enter-line {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .animation-1 {
+    animation-name: enter;
+    animation-duration: 1s;
+  }
+  .animation-2:before {
+    animation-name: enter-line;
+    animation-duration: 0.8s;
+    animation-delay: 0.7s;
+    transform-origin: left;
+  }
+}

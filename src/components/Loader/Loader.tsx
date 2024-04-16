@@ -2,12 +2,19 @@
 import React, { useEffect, useState } from "react";
 import styles from "./loader.module.css";
 
-export default function Loader() {
+interface IProps {
+  onChangeVisible: (isSwitch: boolean) => void;
+}
+
+export default function Loader({ onChangeVisible }: IProps) {
   const [style, setStyle] = useState({});
 
   useEffect(() => {
     setTimeout(() => {
       setStyle({ transform: "scaleX(0)" });
+      setTimeout(() => {
+        onChangeVisible(true);
+      }, 1800);
     }, 1000);
   }, []);
 

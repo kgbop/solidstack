@@ -17,7 +17,7 @@ const LayoutModal = ({
         document.body.classList.remove("lock");
       }}
     >
-      <div className="py-5 pr-5 flex justify-end min-h-full sm:px-4">
+      <div className="py-5 px-5 flex justify-end min-h-full sm:px-4">
         <div
           className="bg-[white] px-10 p-[2rem] w-[55rem] relative"
           onClick={(e) => e.stopPropagation()}

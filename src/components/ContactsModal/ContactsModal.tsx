@@ -22,7 +22,7 @@ export default function ContactsModal({
           [:)]
         </span>
         <div className="mt-auto">
-          <p className="text-[#929298] text-[4.4rem] font-medium uppercase leading-[1.2]">
+          <p className="text-[#929298] text-[4.4rem] font-medium uppercase leading-[1.2] md:text-[2.8rem]">
             стань <br />
             первым <br />
             вместе с нами <br />

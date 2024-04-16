@@ -23,7 +23,7 @@ export default function Amount() {
       <div className="overflow-hidden">
         <div
           ref={myRef}
-          className="_container flex justify-between text-[4.4rem] font-medium uppercase leading-[1.2] duration-1000 translate-y-[120%] lg:flex-col lg:text-[3.6rem] md:text-[2.8rem]"
+          className="_container flex justify-between text-[4.4rem] font-medium uppercase leading-[1.2] duration-1000 translate-y-[120%] lg:flex-col lg:text-[3.6rem] lg:translate-y-[0] md:text-[2.8rem]"
         >
           <div>
             <p>

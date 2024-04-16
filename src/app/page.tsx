@@ -1,5 +1,5 @@
 "use client";
-import { Project, Intro, Amount, ForFree, ReadyMadeTool, Answers, Loader } from "@/components";
+import { Project, Intro, Amount, ForFree, ReadyMadeTool, Answers, Loader, Footer } from "@/components";
 import { useState } from "react";
 
 export default function Home() {
@@ -23,6 +23,7 @@ export default function Home() {
           {new Array(2).fill("").map((item, index) => (
             <Project key={index} />
           ))}
+          <Fopoter />
         </>
       ) : (
         <Loader onChangeVisible={(v) => setIsVisibleContent(v)} />

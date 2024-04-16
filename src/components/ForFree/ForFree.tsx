@@ -7,6 +7,7 @@ import { useWindowSize } from "@/hooks/windowSize";
 
 export default function ForFree() {
   const size = useWindowSize();
+
   const list = [
     { text: "бесплатно", href: "#" },
     { text: "каждый месяц", href: "" },
@@ -14,6 +15,7 @@ export default function ForFree() {
   ];
 
   const myRef = useRef<HTMLDivElement>(null);
+
   const content = (
     <div className="_container py-[2rem]">
       <img src="img/logo-13.svg" className="h-[20.88px]"></img>

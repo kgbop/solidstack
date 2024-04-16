@@ -6,11 +6,10 @@ import { List, CoordinatesButton } from "@/components";
 
 import styles from "./ReadyMadeTool.module.css";
 import classNames from "classnames";
-import { useWindowSize } from "@/hooks/windowSize";
 
 export default function ReadyMadeTool() {
   const [translateValue, setTranslateValue] = useState(-23.07);
-  const size = useWindowSize();
+
   const list = [
     { text: "конструктор", href: "#" },
     { text: "30 дней бесплатно", href: "" },

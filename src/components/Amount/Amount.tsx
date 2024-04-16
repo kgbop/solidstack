@@ -4,18 +4,18 @@ import { useEffect, useRef } from "react";
 
 export default function Amount() {
   const myRef = useRef<HTMLDivElement>(null);
-  const myRefTwo = useRef<HTMLDivElement>(null);
+  const myRef2 = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && myRef.current) {
-          myRef.current.classList.add("translate-y-[0%]");
+          myRef.current.classList.add("translate-y-[0]");
           return;
         }
       });
     });
-    myRefTwo.current && observer.observe(myRefTwo.current);
+    myRef2.current && observer.observe(myRef2.current);
   }, []);
 
   return (
@@ -54,7 +54,7 @@ export default function Amount() {
             <span className="text-[#929298]">ИЗ ТОП ЕРЗ И FORBES</span>
           </p>
         </div>
-        <div ref={myRefTwo}></div>
+        <div ref={myRef2}></div>
       </div>
     </div>
   );

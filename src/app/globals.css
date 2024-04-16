@@ -72,6 +72,7 @@
 .animation-modal-enter {
   opacity: 0;
   visibility: hidden;
+  transform: scale(0);
 }
 .animation-modal-enter-active {
   opacity: 1;

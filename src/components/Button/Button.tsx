@@ -15,7 +15,8 @@ export default function Button({
         "group py-[6px] px-[13px] bg-[#d5ff0c] text-[1.6rem] text-[#1A1B1D] leading-[18px] font-medium tracking-[-.016rem] relative duration-300 hover:pr-[40px]",
         className
       )}
-      onClick={() => {
+      onClick={(e) => {
+        e.preventDefault();
         clickHandler && clickHandler();
       }}
     >

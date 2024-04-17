@@ -26,7 +26,11 @@ export default function ({ myRef, href }: { myRef: any; href: string }) {
   }, []);
 
   return (
-    <div className={classNames("absolute top-0 bottom-0 left-0 right-0 z-20")}>
+    <div
+      className={classNames(
+        "absolute top-0 bottom-0 left-0 right-0 z-20 overflow-hidden"
+      )}
+    >
       <div
         style={{
           top: `${coordinates.clientY}px`,

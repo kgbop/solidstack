@@ -1,4 +1,7 @@
+"use client";
+
 import classNames from "classnames";
+import { useEffect, useState } from "react";
 
 const LayoutModal = ({
   children,
@@ -7,6 +10,12 @@ const LayoutModal = ({
   children: JSX.Element;
   closeModal?: (arg: boolean) => void;
 }) => {
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    setActive(true);
+  }, []);
+
   return (
     <div
       className={classNames(
@@ -19,7 +28,10 @@ const LayoutModal = ({
     >
       <div className="py-5 px-5 flex justify-end min-h-full sm:px-4">
         <div
-          className="bg-[white] px-10 p-[2rem] w-[55rem] relative"
+          className={classNames(
+            "bg-[white] px-10 p-[2rem] w-[55rem] relative duration-[400ms] origin-top-right",
+            active ? "scale-100" : "scale-0"
+          )}
           onClick={(e) => e.stopPropagation()}
         >
           {children}

@@ -52,14 +52,14 @@ export default function Splide({ className }: { className?: string }) {
     <div
       ref={sliderRef}
       className={classNames(
-        "keen-slider h-[7.2rem] bg-[#1a1b1d] text-4xl md:h-[6.4rem]",
+        "keen-slider h-[7.2rem] bg-[#1a1b1d] text-4xl py-3 md:h-[6.4rem]",
         className
       )}
     >
       {logo.map((item, index) => (
         <div
           key={index}
-          className="animation-3 keen-slider__slide justify-center flex min-w-[200px]"
+          className="animation-3 keen-slider__slide justify-center flex min-w-[200px] lg:min-w-[170px] md:min-w-[150px]"
         >
           <img key={index} className="" src={item} alt="" />
         </div>

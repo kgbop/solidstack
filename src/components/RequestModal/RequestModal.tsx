@@ -8,15 +8,17 @@ export default function RequestModal({
 }: {
   closeModal: (arg: boolean) => void;
 }) {
+  const [flag, setFlag] = useState(false);
   const [values, setValues] = useState({
     name: "",
-    tel: undefined,
+    tel: "",
     email: "",
     company: "",
     comment: "",
   });
 
   const onSubmin = () => {
+    setFlag(true);
     values.tel && console.log(values);
   };
 
@@ -42,7 +44,7 @@ export default function RequestModal({
               type="tel"
               placeholder="+7 xxx xxx xx xx"
               value={values.tel}
-              required="Введите номер телефона"
+              error={!values.tel && flag ? "Введите номер телефона" : ""}
               onChange={(e: any) =>
                 setValues({ ...values, tel: e.target.value })
               }

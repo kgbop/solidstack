@@ -23,6 +23,13 @@
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: "Aeonik Pro";
+  font-display: swap;
+  src: url("/fonts/AeonikPro-Medium.05757e0.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
 .bg-gradient {
   background: radial-gradient(
       187.3% 199.13% at -12.08% -11.89%,

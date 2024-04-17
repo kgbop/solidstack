@@ -28,7 +28,7 @@ const config: Config = {
           fontSize: "0.6944vw",
         },
         body: {
-          minWidth: "380px",
+          minWidth: "382px",
           display: "flex",
           flexDirection: "column",
           minHeight: "100vh",

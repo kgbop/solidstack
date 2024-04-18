@@ -6,31 +6,31 @@ export default function ContactsModal({
   closeModal: (arg: boolean) => void;
 }) {
   const list = [
-    { text: "youtube →", href: "" },
+    { text: "linkedin →", href: "" },
     { text: "telegram →", href: "" },
-    { text: "vc.ru →", href: "" },
+    { text: "clutch.co →", href: "" },
   ];
 
   return (
     <LayoutModal closeModal={closeModal}>
       <div className="flex flex-col h-full relative">
         <p className="text-[1.6rem] text-[#1a1b1d] font-medium tracking-[-.016rem] leading-[1.2]">
-          москва <br />
-          ул. профсоюзная 76
+          Toronto <br />
+          955 Bay St.
         </p>
         <span className="text-[#f3f3f3] text-[4.4rem] font-medium uppercase absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           [:)]
         </span>
         <div className="mt-auto">
           <p className="text-[#929298] text-[4.4rem] font-medium uppercase leading-[1.2] md:text-[2.8rem]">
-            стань <br />
-            первым <br />
-            вместе с нами <br />
+            reach out <br />
+            to <br />
+            us <br />
             <a
               className="text-[#1a1b1d] relative before:content-[''] before:block before:h-[3px] before:w-full before:bg-[#1a1b1d] before:absolute before:bottom-0"
-              href="mailto:new@idaproject.com"
+              href="mailto:new@solidstack.so"
             >
-              new@idaproject.com
+              new@solidstack.so
             </a>
           </p>
           <ul className="text-[1.2rem] tracking-[-.012rem] uppercase font-medium text-[#1a1b1d] mt-[2rem] flex">

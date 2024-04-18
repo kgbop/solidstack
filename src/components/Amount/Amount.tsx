@@ -27,7 +27,7 @@ export default function Amount() {
         >
           <div>
             <p>
-              350+ продуктов
+              focused on solving unique
               <img
                 src="img/img-1.jpg"
                 width="80.41px"
@@ -37,7 +37,7 @@ export default function Amount() {
               />
             </p>
             <p className="flex gap-3 justify-center items-center lg:justify-start">
-              <span className="text-[#929298] md:hidden">для</span>
+              <span className="text-[#929298] md:hidden">and</span>
               <img
                 src="img/img-1.jpg"
                 width="80.41px"
@@ -45,13 +45,13 @@ export default function Amount() {
                 alt=""
                 className="md:hidden"
               />
-              <span>100+ застройщиков</span>
+              <span>emerging problems.</span>
             </p>
           </div>
           <p className="text-right lg:text-left lg:text-[14px] lg:lowercase lg:mt-[10rem] md:mt-[7.2rem]">
-            95% <span className="text-[#929298]">дальше</span> растут с нами
+            Our edge <span className="text-[#929298]">lies</span> in
             <br />
-            <span className="text-[#929298]">ИЗ ТОП ЕРЗ И FORBES</span>
+            <span className="text-[#929298]">our dynamic approach</span>
           </p>
         </div>
         <div ref={myRef2}></div>

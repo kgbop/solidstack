@@ -20,7 +20,7 @@ export default function Footer() {
           md:justify-end md:items-start"
         >
           <h2 className="text-[4.4rem] text-[#1a1b1d] font-medium uppercase lg:text-[4.4rem] md:text-[32px]">
-            +67 проектов
+            +67 projects
           </h2>
           <Clock />
         </div>

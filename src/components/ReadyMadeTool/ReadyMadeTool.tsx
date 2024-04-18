@@ -11,12 +11,10 @@ export default function ReadyMadeTool() {
   const [translateValue, setTranslateValue] = useState(-23.07);
 
   const list = [
-    { text: "конструктор", href: "#" },
-    { text: "30 дней бесплатно", href: "" },
-    { text: "60+ функциональных блоков", href: "" },
-    { text: "аналитика", href: "" },
-    { text: "колтрекинг", href: "" },
-    { text: "Фиды", href: "" },
+    { text: "convenience", href: "#" },
+    { text: "smart", href: "" },
+    { text: "60+ features", href: "" },
+    { text: "design", href: "" },
   ];
 
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -83,27 +81,26 @@ export default function ReadyMadeTool() {
       <div className="_container">
         <img src="img/logo-13.svg" className="h-[20.88px]"></img>
         <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center lg:text-[3.6rem] md:mt-[8.4rem] md:text-[3.2rem] md:text-left">
-          <span className="opacity-50">готовый инструмент</span>
+          <span className="opacity-50">smart livewell</span>
           <h2 className="flex gap-3 justify-center items-center md:justify-start md:flex-col md:items-start">
-            для запуска
+            installable
             <span className="flex gap-3">
-              сайта
+
               <video
                 muted
                 loop
                 autoPlay
                 playsInline
-                src="https://idaproject.com/video/lite.mp4"
+                src="https://videos.pexels.com/video-files/2257010/2257010-uhd_3840_2160_24fps.mp4"
                 className="w-[72px]"
               ></video>
-              за 1 день
+              on your boat
             </span>
           </h2>
         </div>
         <List list={list} className="md:hidden" />
         <p className="mt-[3.7rem] text-[1.4rem] text-white tracking-[-.014rem] lg:mt-[5.3rem] md:mt-[7rem]">
-          быстрая реализация <br />
-          инструмента продаж
+          convenience while fishing
         </p>
       </div>
       <CoordinatesButton myRef={myRef} href="#" />

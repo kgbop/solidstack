@@ -14,9 +14,9 @@ export default function Answers() {
   const myRef = useRef<HTMLDivElement>(null);
 
   const list = [
-    { text: "ai gpt", href: "#" },
-    { text: "вопросы любой сложности", href: "" },
-    { text: "выгрузка аналитики", href: "" },
+    { text: "24 hours", href: "#" },
+    { text: "7 days a week", href: "" },
+    { text: "top priority", href: "" },
   ];
 
   const handleScroll = () => {
@@ -50,13 +50,13 @@ export default function Answers() {
         <img src="img/logo-13.svg" className="h-[20.88px]"></img>
         <div className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center lg:text-[3.6rem] lg:mt-[6.5rem] md:text-[3.2rem]">
           <div className="opacity-50 flex gap-3 justify-center md:flex-col md:items-start md:gap-0">
-            <span>ответы</span>
-            <span>по щелчку</span>
-            <span>пальцев</span>
+            <span>answers</span>
+            <span>at the snap</span>
+            <span>of a finger</span>
           </div>
           <h2 className="flex gap-3 justify-center items-center md:flex-col md:gap-0 md:items-start">
             <span className="flex gap-3">
-              без задержек
+              without delay
               <video
                 muted
                 loop
@@ -66,13 +66,12 @@ export default function Answers() {
                 className="w-[72px]"
               ></video>
             </span>
-            <span>круглосуточно</span>
+            <span>24/7</span>
           </h2>
         </div>
         <List list={list} className="md:hidden" />
         <p className="mt-[3.7rem] text-[1.4rem] text-white tracking-[-.014rem] lg:mt-[5.3rem]">
-          первый полноценый <br />
-          бот на ИИ
+          First class support
         </p>
       </div>
       <div

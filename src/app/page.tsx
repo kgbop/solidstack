@@ -14,6 +14,54 @@ import { useState } from "react";
 export default function Home() {
   const [isVisbleContent, setIsVisibleContent] = useState(false);
 
+  const projects = [{
+    logo: "scatter-logo.png",
+    logoWidth: 50,
+    text: "Developed Scatter's Archetype smart contract technology, leading the creation of the world's first NFT ecosystem with on-chain affiliate marketing rewards.",
+    tags: ["working for 2 years", "completed > 2000 tasks"],
+    list: [
+      {
+        title: "Blockchain",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        title: "Distributed Systems",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        title: "Web Development",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        link: "https://scatter.art",
+      },
+      {
+        title: "System Design",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+      {
+        title: "Business Analytics",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      },
+    ],
+  },
+    {
+      logo: "itraq.png",
+      logoWidth: 120,
+      text: "Interactively redesigned Itraq's tracking portal for a vastly improved customer experience.\n",
+      tags: ["designed and launched", "In 2023"],
+      list: [
+        {
+          title: "Web Development",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          link: "https://scatter.art",
+        },
+        {
+          title: "System Design",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        },
+      ],
+    },
+  ];
+
   const project = {
     logo: "logo-1.svg",
     text: "работаем со старейшим застройщиком красноярского края для обновления облика сайта застройщика и цифровизации деятельности компании",
@@ -50,8 +98,8 @@ export default function Home() {
           <Intro />
           <Amount />
           <ReadyMadeTool />
-          {new Array(2).fill("").map((item, index) => (
-            <Project key={index} project={project} />
+          {projects.map((item, index) => (
+            <Project key={index} project={item} />
           ))}
           <Answers />
           {new Array(2).fill("").map((item, index) => (

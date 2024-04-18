@@ -52,7 +52,7 @@ export default function ({ myRef, href }: { myRef: any; href: string }) {
               : ""
           )}
         >
-          <Button text="Подробнее" />
+          <Button text="Read more" />
         </div>
       )}
       <a

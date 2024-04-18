@@ -25,7 +25,7 @@ export default function Clock() {
       className="text-[#929298] text-[1.2rem] tracking-[-.024rem] uppercase absolute bottom-0 left-1/2 -translate-x-1/2 font-medium lg:static
       lg:transform-none"
     >
-      <time suppressHydrationWarning>москва.{timeString}</time>
+      <time suppressHydrationWarning>toronto.{timeString}</time>
     </div>
   );
 }

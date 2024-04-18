@@ -94,3 +94,8 @@
   visibility: hidden;
   transition: 400ms;
 }
+@media only screen and (max-width: 767px) {
+  .animation-2:before {
+    animation-delay: 0s;
+  }
+}

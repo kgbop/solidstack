@@ -5,9 +5,19 @@ import "keen-slider/keen-slider.min.css";
 import classNames from "classnames";
 
 export default function Splide({ className }: { className?: string }) {
-  const animation = { duration: 10000, easing: (t: any) => t };
+  const animation = { duration: 30000, easing: (t: any) => t };
 
   const logo = [
+    "img/logo-3.png",
+    "img/logo-4.png",
+    "img/logo-5.png",
+    "img/logo-6.png",
+    "img/logo-7.png",
+    "img/logo-8.png",
+    "img/logo-9.png",
+    "img/logo-10.png",
+    "img/logo-11.png",
+    "img/logo-12.png",
     "img/logo-3.png",
     "img/logo-4.png",
     "img/logo-5.png",

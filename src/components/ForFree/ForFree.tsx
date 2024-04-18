@@ -21,7 +21,7 @@ export default function ForFree() {
       <img src="img/logo-13.svg" className="h-[20.88px]"></img>
       <div
         className="mt-[5rem] text-[#fff] text-[4.4rem] font-medium uppercase leading-[1.2] text-center lg:text-[3.6rem] lg:mt-[7.2rem] md:text-start
-            md:text-[3.2rem] md:mt-[8.4rem]"
+        md:text-[3.2rem] md:mt-[8.4rem]"
       >
         <h2 className="flex gap-3 justify-center items-center md:flex-col md:gap-0 md:items-start">
           бесплатный
@@ -50,13 +50,16 @@ export default function ForFree() {
   );
 
   return (
-    <div ref={myRef} className="relative">
+    <div
+      ref={myRef}
+      className="relative lg:bg-[url('/img/bg-1.jpg')] lg:bg-center lg:bg-cover md:bg-[url('/img/bg-2.jpg')]"
+    >
       {size.width && size.width > 1023 ? (
         <Parallax bgImage="/img/bg-1.jpg" strength={200}>
           {content}
         </Parallax>
       ) : (
-        <div className="bg-black">{content}</div>
+        <div>{content}</div>
       )}
 
       <CoordinatesButton myRef={myRef} href="#" />

@@ -39,7 +39,7 @@ export default function Input({
         {text}
         <input
           ref={inputRef}
-          readOnly
+          readOnly={readOnly}
           value={value}
           type={type}
           placeholder={placeholder}

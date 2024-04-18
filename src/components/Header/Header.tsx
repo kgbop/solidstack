@@ -24,8 +24,11 @@ export default function Header() {
     <>
       <header className="bg-white py-3 fixed left-0 right-0 z-30">
         <div className="_container flex items-center justify-between">
-          <div className="flex items-center">
-            <img src="img/logo-2.svg" alt="" className="h-20 mr-6" />
+          <div className="flex items-center font-medium text-[1.6rem] leading-[16px] text-[#1A1B1D] tracking-[-.016rem]">
+            <div className="flex items-center">
+              <img src="img/logo-2.svg" alt="" className="h-20 mr-6" />
+              <p className="mr-[4.8rem]">Solidstack</p>
+            </div>
             <div className="h-[2.4rem] w-[2.4rem] fill-transparent stroke-[#1a1b1d]">
               <svg width="100%" height="100%" viewBox="0 0 48 48">
                 <circle
@@ -39,9 +42,7 @@ export default function Header() {
                 ></circle>
               </svg>
             </div>
-            <button className="font-medium text-[1.6rem] leading-[16px] text-[#1A1B1D] tracking-[-.016rem] ml-[4.8rem] lg:hidden">
-              кейсы
-            </button>
+            <button className="ml-[4.8rem] lg:hidden">кейсы</button>
           </div>
           <div className="flex gap-10 items-center lg:flex-auto">
             <a

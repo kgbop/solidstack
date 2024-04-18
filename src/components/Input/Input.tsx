@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classNames from "classnames";
 
 export default function Input({
@@ -10,6 +10,9 @@ export default function Input({
   onChange,
   value,
   error,
+  onClick,
+  className,
+  inputRef,
 }: {
   text: string;
   type: string;
@@ -17,8 +20,15 @@ export default function Input({
   onChange?: (e: any) => void;
   value?: string;
   error?: string;
+  onClick?: (e: any) => void;
+  className?: string;
+  inputRef?: any;
 }) {
   const [isFocus, setIsFocus] = useState(false);
+
+  useEffect(() => {
+    console.log(inputRef);
+  }, []);
 
   return (
     <div>
@@ -30,10 +40,12 @@ export default function Input({
       >
         {text}
         <input
+          ref={inputRef}
           value={value}
           type={type}
           placeholder={placeholder}
           onChange={onChange}
+          onClick={onClick}
           onFocus={() => {
             setIsFocus(true);
           }}
@@ -42,7 +54,8 @@ export default function Input({
           }}
           className={classNames(
             "text-[2.7rem] tracking-[-.032rem] font-medium text-[#1a1b1d] leading-[1.15] border-b focus:outline-none placeholder:text-[#e1e2e0]",
-            error ? "border-[#ef3b24]" : "border-[#e1e2e0]"
+            error ? "border-[#ef3b24]" : "border-[#e1e2e0]",
+            className
           )}
         />
       </label>

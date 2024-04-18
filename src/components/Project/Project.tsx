@@ -3,32 +3,17 @@
 import { useState } from "react";
 import classNames from "classnames";
 
-export default function Project() {
+export default function Project({
+  project,
+}: {
+  project: {
+    list: { title: string; text: string; link?: string }[];
+    logo: string;
+    text: string;
+    tags: string[];
+  };
+}) {
   const [active, setActive] = useState(false);
-
-  const projectList = [
-    {
-      title: "Аналитика",
-      text: "Предпроектная аналитика проекта, включающая в себя разработку технического задания, структуру и формирование бизнес-аналатики для определения приоритетов функционала и структуры проекта",
-    },
-    {
-      title: "UX/UI исследования",
-      text: "Исследования пользовательского опыта взаимодействия с продуктами компании направленные на оптимизацию и улучшения удовлетворенности в разрезе дизайна и функционала.",
-    },
-    {
-      title: "Разработка сайта",
-      text: "Разработка высокотехнологичного веб-инструмента, который является основным и эффективным инструментом продаж в первичной воронке покупателя",
-      link: "#",
-    },
-    {
-      title: "Бизнес-аналитика",
-      text: "Улучшение и оптимизация существующих бизнес-процессов и процедур в компании. Это стратегический подход, который включает анализ технологических, организационных и операционных изменений с целью повышения эффективности бизнеса",
-    },
-    {
-      title: "Бизнес-процессы",
-      text: "Преобразование аналоговых процессов и внедрение инструментов для формирования цифровизации отдельных этапов покупки недвижимости",
-    },
-  ];
 
   return (
     <div
@@ -45,14 +30,14 @@ export default function Project() {
         <div className="_container flex min-h-[24rem] lg:min-h-[auto] md:flex-col">
           <div className="flex items-start lg:flex-col md:flex-col-reverse">
             <div className="w-[26.7rem] mr-[5.3rem] h-[8.5rem] lg:flex-auto lg:h-[16rem] lg:pb-[4rem] lg:w-[23.8rem] md:h-[21.4rem] md:pb-0 md:w-full md:flex md:justify-center">
-              <img src="img/logo-1.svg" alt="" className="md:w-fit" />
+              <img src={`img/${project.logo}`} alt="" className="md:w-fit" />
             </div>
             <div className="flex items-start lg:flex-col md:flex-row md:w-full md:justify-between">
               <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase w-[20rem] lg:h-auto">
-                <span>Проект в работе</span>
+                <span>{project.tags[0]}</span>
               </div>
               <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase lg:h-auto">
-                <span>Скоро</span>
+                <span>{project.tags[1]}</span>
               </div>
             </div>
           </div>
@@ -70,7 +55,7 @@ export default function Project() {
                       active && "flex-col items-start gap-y-[4rem]"
                     )}
                   >
-                    {projectList.map((item, index) => (
+                    {project.list.map((item, index) => (
                       <li key={index}>
                         <div
                           className="flex group"
@@ -127,9 +112,7 @@ export default function Project() {
                   active && "hidden md:!block"
                 )}
               >
-                работаем со старейшим застройщиком красноярского края для
-                обновления облика сайта застройщика и цифровизации деятельности
-                компании
+                {project.text}
               </p>
             </div>
             <div

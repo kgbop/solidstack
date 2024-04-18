@@ -13,6 +13,7 @@ export default function Input({
   onClick,
   className,
   inputRef,
+  readOnly,
 }: {
   text: string;
   type: string;
@@ -23,12 +24,9 @@ export default function Input({
   onClick?: (e: any) => void;
   className?: string;
   inputRef?: any;
+  readOnly?: boolean;
 }) {
   const [isFocus, setIsFocus] = useState(false);
-
-  useEffect(() => {
-    console.log(inputRef);
-  }, []);
 
   return (
     <div>
@@ -41,6 +39,7 @@ export default function Input({
         {text}
         <input
           ref={inputRef}
+          readOnly
           value={value}
           type={type}
           placeholder={placeholder}

@@ -87,6 +87,7 @@ export default function RequestModal({
                 type="text"
                 placeholder="ваш файл для нас"
                 className="cursor-pointer pr-8"
+                readOnly
                 value={values.file.name}
                 onClick={() => {
                   inputFileRef?.current?.click();

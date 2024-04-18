@@ -86,7 +86,7 @@ export default function RequestModal({
                 text="загрузить файл"
                 type="text"
                 placeholder="ваш файл для нас"
-                className="cursor-pointer pr-12"
+                className="cursor-pointer pr-8"
                 value={values.file.name}
                 onClick={() => {
                   inputFileRef?.current?.click();

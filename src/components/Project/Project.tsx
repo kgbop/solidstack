@@ -30,7 +30,7 @@ export default function Project({
         <div className="_container flex min-h-[24rem] lg:min-h-[auto] md:flex-col">
           <div className="flex items-start lg:flex-col md:flex-col-reverse">
             <div className="w-[26.7rem] mr-[5.3rem] h-[8.5rem] lg:flex-auto lg:h-[16rem] lg:pb-[4rem] lg:w-[23.8rem] md:h-[21.4rem] md:pb-0 md:w-full md:flex md:justify-center">
-              <img src={`img/${project.logo}`} alt="" width={project.logoWidth} className="md:w-fit" />
+              <img src={`img/${project.logo}`} alt="" className="md:w-fit" />
             </div>
             <div className="flex items-start lg:flex-col md:flex-row md:w-full md:justify-between">
               <div className="text-[1.2rem] font-medium h-[8.5rem] tracking-[-.024rem] uppercase w-[20rem] lg:h-auto">

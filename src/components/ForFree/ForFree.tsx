@@ -9,9 +9,9 @@ export default function ForFree() {
   const size = useWindowSize();
 
   const list = [
-    { text: "бесплатно", href: "#" },
-    { text: "каждый месяц", href: "" },
-    { text: "потратили более 100 млн на аналитику", href: "" },
+    { text: "world-class", href: "#" },
+    { text: "small team", href: "" },
+    { text: "quality", href: "" },
   ];
 
   const myRef = useRef<HTMLDivElement>(null);
@@ -24,27 +24,15 @@ export default function ForFree() {
         md:text-[3.2rem] md:mt-[8.4rem]"
       >
         <h2 className="flex gap-3 justify-center items-center md:flex-col md:gap-0 md:items-start">
-          бесплатный
-          <span className="flex gap-3 md:flex-row-reverse">
-            <video
-              muted
-              loop
-              autoPlay
-              playsInline
-              src="https://idaproject.com/video/insight.mp4"
-              className="w-[72px]"
-            ></video>
-            опыт
-          </span>
+            You don’t need to hire
         </h2>
         <span className="opacity-50 md:flex md:flex-col">
-          за 10 лет <span>экспертизы</span>
+         a CTO to get a world-class software.
         </span>
       </div>
       <List list={list} className="md:hidden" />
       <p className="mt-[3.7rem] text-[1.4rem] text-white tracking-[-.014rem] lg:mt-[5.3rem]">
-        на 99% эффективнее <br />
-        консультантов
+        CTO as service
       </p>
     </div>
   );
